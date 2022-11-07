@@ -1,5 +1,5 @@
 name: CD
-on: [worlflow_dispatch]
+on: [workflow_dispatch]
 jobs:
   #this workdflow contains a single job called "hello"
   hello:
