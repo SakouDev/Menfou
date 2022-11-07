@@ -9,4 +9,4 @@ jobs:
     # Steps represent a sequence of talks that will be execcuted as part of the jobs
     steps:
     - name: helloweurldz
-      run: echo 'Hello JE T'AIME PAS SALETE'
+      run: echo 'Hello simplonz'
