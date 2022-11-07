@@ -6,7 +6,7 @@ jobs:
     # the type of runner that the job will run on
     runs-on: ubuntu-latest
 
-  # Steps represent a sequence of talks that will be execcuted as part of the jobs
-  steps:
-  - name: helloweurldz
-    run: echo 'Hello simplonz'
+    # Steps represent a sequence of talks that will be execcuted as part of the jobs
+    steps:
+    - name: helloweurldz
+      run: echo 'Hello JE T'AIME PAS SALETE'
