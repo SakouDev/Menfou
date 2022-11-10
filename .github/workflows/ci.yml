@@ -18,6 +18,10 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
-          cd ~/projets/demo1/lucv
+          cd ~/projets/demo1/lucv/Menfou
           pwd
-          touch menfou.txt
+          git pull origin devops
+          git status
+          npm install
+          npm run build
+          pm2 start pm2.config.js
