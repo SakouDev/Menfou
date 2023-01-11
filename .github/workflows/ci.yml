@@ -16,9 +16,9 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         key: ${{ secrets.PRIVATE_KEY }}
-        port: 22
+        port: 80
         script: |
-          cd ~/projets/demo1/lucv/Menfou
+          cd docker
           pwd
           git pull origin master
           git status

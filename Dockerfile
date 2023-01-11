@@ -1,7 +1,14 @@
 # syntax=docker/dockerfile:1
 FROM node:18-alpine
-WORKDIR /app
+WORKDIR /
 COPY . .
-RUN npm install --production
-CMD ["node", "src/index.js"]
+
+RUN touch .env
+
+RUN npm install
+
+run npm run build
+
 EXPOSE 3000
+
+CMD ["npm","run","start"]
