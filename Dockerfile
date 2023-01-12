@@ -3,8 +3,6 @@ FROM node:18-alpine
 WORKDIR /
 COPY . .
 
-RUN touch .env
-
 RUN npm install
 
 run npm run build
