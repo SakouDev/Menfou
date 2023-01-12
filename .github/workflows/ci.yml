@@ -24,7 +24,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest
 
         # name: Deploy using ssh
         # uses: appleboy/ssh-action@master
