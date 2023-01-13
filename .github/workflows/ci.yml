@@ -35,5 +35,5 @@ jobs:
             docker rm dockerss
             docker rmi docker_test:latest
             docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-            docker run -p 7777:3000 -d --name dockerss ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest
+            docker run -p 7777:3000 -d --name dockerss ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest --env "MENFOU=${{ secrets.MENFOU }}"
 
