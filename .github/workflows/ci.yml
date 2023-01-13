@@ -22,7 +22,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest.
+
+          
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
@@ -31,5 +33,9 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 2704
           script: |
-            cd docker
-            mkdir coucou
+            docker stop dockerss
+            docker rm dockerss
+            docker rmi latest
+            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+            docker run -p 2704:3000 -d ${{ secrets.DOCKERHUB_USERNAME }}/docker_test:latest --env ${{ secrets.MENFOU }}
+
